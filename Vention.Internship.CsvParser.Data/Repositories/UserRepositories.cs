@@ -1,4 +1,5 @@
-﻿using Vention.Internship.CsvParser.Data.DbContexts;
+﻿using Microsoft.EntityFrameworkCore;
+using Vention.Internship.CsvParser.Data.DbContexts;
 using Vention.Internship.CsvParser.Domain.Entities;
 
 namespace Vention.Internship.CsvParser.Data.Repositories
@@ -27,8 +28,11 @@ namespace Vention.Internship.CsvParser.Data.Repositories
 
             if (oldUser is not null)
             {
-                user.UserIdentifier = id;
-                dbContext.Users.Update(user);
+
+                oldUser.Username = user.Username;
+                oldUser.Age = user.Age;
+                oldUser.Email = user.Email;
+                oldUser.City = user.City;
                 await dbContext.SaveChangesAsync();
             }
             else
