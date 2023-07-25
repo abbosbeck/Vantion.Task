@@ -19,7 +19,7 @@ namespace Vention.Internship.CsvParser.Data.Repositories
         }
 
 
-        public async ValueTask<User> GetUserById(Guid id) =>
+        public async ValueTask<User> GetUserByIdAsync(Guid id) =>
             await dbContext.Users.FindAsync(id);
 
         public async ValueTask<User> UpdateUserAsync(Guid id, User user)
