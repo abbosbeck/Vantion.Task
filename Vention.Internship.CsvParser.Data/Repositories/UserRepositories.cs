@@ -11,11 +11,10 @@ namespace Vention.Internship.CsvParser.Data.Repositories
             this.dbContext = dbContext;
         }
 
-        public async ValueTask<User> CreateUserAsync(User user)
+        public async ValueTask CreateUserAsync(User user)
         {
             await dbContext.Users.AddAsync(user);
-
-            return user;
+            await dbContext.SaveChangesAsync();
         }
 
 
