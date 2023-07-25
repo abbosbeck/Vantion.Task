@@ -6,7 +6,7 @@ namespace Vention.Internship.CsvParser.Data.DbContexts
     public class CsvParserDbContext : DbContext
     {
         public CsvParserDbContext(DbContextOptions<CsvParserDbContext> options) : base(options)
-            { }
+        { }
 
         public DbSet<User> Users { get; set; }
 
