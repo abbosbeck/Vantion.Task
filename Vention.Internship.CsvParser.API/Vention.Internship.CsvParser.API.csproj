@@ -17,12 +17,12 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\Vention.Internship.CsvParser.Data\Vention.Internship.CsvParser.Data.csproj" />
+    <ProjectReference Include="..\Vention.Internship.CsvParser.Service\Vention.Internship.CsvParser.Service.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Vention.Internship.CsvParser.Data\Vention.Internship.CsvParser.Data.csproj" />
-    <ProjectReference Include="..\Vention.Internship.CsvParser.Service\Vention.Internship.CsvParser.Service.csproj" />
+    <Folder Include="wwwroot\uploads\" />
   </ItemGroup>
 
 </Project>
