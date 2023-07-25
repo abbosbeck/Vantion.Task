@@ -8,15 +8,21 @@
 
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="7.0.3" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.9">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="7.0.9" />
     <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Controllers\" />
+    <ProjectReference Include="..\Vention.Internship.CsvParser.Data\Vention.Internship.CsvParser.Data.csproj" />
+    <ProjectReference Include="..\Vention.Internship.CsvParser.Service\Vention.Internship.CsvParser.Service.csproj" />
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Vention.Internship.CsvParser.Service\Vention.Internship.CsvParser.Service.csproj" />
+    <Folder Include="wwwroot\uploads\" />
   </ItemGroup>
 
 </Project>
