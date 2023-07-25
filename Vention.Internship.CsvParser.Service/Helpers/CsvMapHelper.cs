@@ -13,8 +13,8 @@ namespace Vention.Internship.CsvParser.Service.Helpers
             {
                 using (var csvReader = new CsvReader(streamReader, CultureInfo.InvariantCulture))
                 {
-                    csvReader.Context.RegisterClassMap<UserClassMap>(); 
-                    
+                    csvReader.Context.RegisterClassMap<UserClassMap>();
+
                     return csvReader.GetRecords<User>().ToList();
                 }
             }

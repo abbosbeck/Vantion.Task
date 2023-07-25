@@ -1,5 +1,4 @@
-﻿using Microsoft.EntityFrameworkCore;
-using Vention.Internship.CsvParser.Data.DbContexts;
+﻿using Vention.Internship.CsvParser.Data.DbContexts;
 using Vention.Internship.CsvParser.Domain.Entities;
 
 namespace Vention.Internship.CsvParser.Data.Repositories

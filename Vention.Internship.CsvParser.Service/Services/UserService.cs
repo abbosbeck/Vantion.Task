@@ -19,7 +19,7 @@ namespace Vention.Internship.CsvParser.Service.Services
 
             if (!(fileType.Equals("text/csv", StringComparison.OrdinalIgnoreCase)
                 || formFile.FileName.EndsWith(".csv", StringComparison.OrdinalIgnoreCase)))
-                    throw new CsvParserException(400, "Invalid file type. Only CSV files are allowed.");
+                throw new CsvParserException(400, "Invalid file type. Only CSV files are allowed.");
 
             string filePath = Path.Combine(wwwrootPath, "uploads", formFile.FileName);
 
