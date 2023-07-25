@@ -1,0 +1,14 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Vention.Internship.CsvParser.Data\Vention.Internship.CsvParser.Data.csproj" />
+    <ProjectReference Include="..\Vention.Internship.CsvParser.Domain\Vention.Internship.CsvParser.Domain.csproj" />
+  </ItemGroup>
+
+</Project>
