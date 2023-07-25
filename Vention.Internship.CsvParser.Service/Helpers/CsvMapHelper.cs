@@ -5,7 +5,7 @@ using Vention.Internship.CsvParser.Domain.Entities;
 
 namespace Vention.Internship.CsvParser.Service.Helpers
 {
-    public static class CsvHelper
+    public static class CsvMapHelper
     {
         public static List<User> CsvToList(string path)
         {
