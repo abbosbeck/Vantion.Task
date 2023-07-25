@@ -21,7 +21,7 @@ namespace Vention.Internship.CsvParser.Data.Repositories
         public async ValueTask<User> GetUserByIdAsync(Guid id) =>
             await dbContext.Users.FindAsync(id);
 
-        public async ValueTask<User> UpdateUserAsync(Guid id, User user)
+        public async ValueTask UpdateUserAsync(Guid id, User user)
         {
             var oldUser = await dbContext.Users.FindAsync(id);
 
@@ -30,11 +30,12 @@ namespace Vention.Internship.CsvParser.Data.Repositories
                 user.UserIdentifier = id;
                 dbContext.Users.Update(user);
                 await dbContext.SaveChangesAsync();
-
-                return user;
+            }
+            else
+            {
+                throw new NullReferenceException("Not found user to update!");
             }
 
-            throw new NullReferenceException("Not found user to update!");
         }
     }
 }
