@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace Vention.Internship.CsvParser.Service.Validations
+﻿namespace Vention.Internship.CsvParser.Service.Validations
 {
     public static class ValidationEmail
     {
@@ -18,27 +12,27 @@ namespace Vention.Internship.CsvParser.Service.Validations
             string[] parts = email.Split('@');
             if (parts.Length != 2)
             {
-                return false; 
+                return false;
             }
 
             string localPart = parts[0];
             string domainPart = parts[1];
             if (string.IsNullOrWhiteSpace(localPart) || string.IsNullOrWhiteSpace(domainPart))
             {
-                return false; 
+                return false;
             }
 
             foreach (char c in localPart)
             {
                 if (!char.IsLetterOrDigit(c) && c != '.' && c != '_' && c != '-')
                 {
-                    return false; 
+                    return false;
                 }
             }
 
             if (domainPart.Length < 2 || !domainPart.Contains(".") || domainPart.Split(".").Length != 2 || domainPart.EndsWith(".") || domainPart.StartsWith("."))
             {
-                return false; 
+                return false;
             }
 
             return true;
