@@ -48,4 +48,5 @@ Swagger provides two functions:
 
 ### Example CSV File
 
-In our GitHub repository, you can find an example CSV file at the following path: [Vention.Internship.CsvParser.API/wwwroot/uploads](snakes_count_10.csv). You can use this file as a reference to understand the required format for the CSV data.
+In our GitHub repository, you can find an example CSV file at the following path: [Vantion.Task/Vention.Internship.CsvParser.API/wwwroot/uploads
+](snakes_count_10.csv). You can use this file as a reference to understand the required format for the CSV data.
