@@ -32,11 +32,13 @@ To use this project, follow these steps:
 
 2. Ensure you have the .NET 7 SDK installed on your machine.
 
-3. Open the terminal in the project folder.
+3. Check the database settings in [appsettings.json](https://github.com/abbosbeck/Vantion.Task/blob/master/Vention.Internship.CsvParser.API/appsettings.json). Ensure that you have already created a database manually with the name `CSVParserDb`. 
 
-4. Run the command `dotnet run` in the terminal.
+4. Open the terminal in the project folder.
 
-5. If the project starts successfully, you will see it running on your browser via Swagger.
+5. Run the command `dotnet run` in the terminal.
+
+6. If the project starts successfully, you will see it running on your browser via Swagger.
 
 ### Swagger Endpoints
 
