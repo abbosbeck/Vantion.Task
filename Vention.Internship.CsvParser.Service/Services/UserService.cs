@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using System.Net;
+using Microsoft.AspNetCore.Http;
 using Vention.Internship.CsvParser.Data.Repositories;
 using Vention.Internship.CsvParser.Domain.Entities;
 using Vention.Internship.CsvParser.Service.Exceptions;
@@ -19,7 +20,7 @@ namespace Vention.Internship.CsvParser.Service.Services
 
             if (!(fileType.Equals("text/csv", StringComparison.OrdinalIgnoreCase)
                 || formFile.FileName.EndsWith(".csv", StringComparison.OrdinalIgnoreCase)))
-                throw new CsvParserException(400, "Invalid file type. Only CSV files are allowed.");
+                throw new CsvParserException(HttpStatusCode.BadRequest, "Invalid file type. Only CSV files are allowed.");
 
             string filePath = Path.Combine(wwwrootPath, "uploads", formFile.FileName);
 

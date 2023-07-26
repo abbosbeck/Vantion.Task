@@ -34,11 +34,6 @@ namespace Vention.Internship.CsvParser.Data.Repositories
                 oldUser.City = user.City;
                 await dbContext.SaveChangesAsync();
             }
-            else
-            {
-                throw new NullReferenceException("Not found user to update!");
-            }
-
         }
     }
 }
