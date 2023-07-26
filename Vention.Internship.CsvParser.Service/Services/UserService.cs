@@ -36,7 +36,7 @@ namespace Vention.Internship.CsvParser.Service.Services
             {
                 if (!ValidationEmail.ValidateEmail(user.Email))
                     throw new CsvParserException(HttpStatusCode.BadRequest, $"{user.Email} is not valid!");
-                
+
                 var userAlreadyExists = await userRepository.GetUserByIdAsync(user.UserIdentifier);
 
                 if (userAlreadyExists != null)
