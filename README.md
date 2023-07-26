@@ -48,4 +48,4 @@ Swagger provides two functions:
 
 ### Example CSV File
 
-In our GitHub repository, you can find an example CSV file at the following path: [example.csv](https://github.com/Abbosbeck/Vantion.Task/blob/main/Vention.Internship.CsvParser.API/wwwroot/uploads/example.csv). You can use this file as a reference to understand the required format for the CSV data.
+In our GitHub repository, you can find an example CSV file at the following path: [example.csv]([https://github.com/Abbosbeck/Vantion.Task/blob/main/Vention.Internship.CsvParser.API/wwwroot/uploads](https://github.com/abbosbeck/Vantion.Task/tree/master/Vention.Internship.CsvParser.API/wwwroot/uploads)https://github.com/abbosbeck/Vantion.Task/tree/master/Vention.Internship.CsvParser.API/wwwroot/uploads/example.csv). You can use this file as a reference to understand the required format for the CSV data.
