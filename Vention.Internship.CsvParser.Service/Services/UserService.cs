@@ -4,6 +4,7 @@ using Vention.Internship.CsvParser.Data.Repositories;
 using Vention.Internship.CsvParser.Domain.Entities;
 using Vention.Internship.CsvParser.Service.Exceptions;
 using Vention.Internship.CsvParser.Service.Helpers;
+using Vention.Internship.CsvParser.Service.Validations;
 
 namespace Vention.Internship.CsvParser.Service.Services
 {
@@ -33,6 +34,9 @@ namespace Vention.Internship.CsvParser.Service.Services
 
             foreach (var user in newUsersList)
             {
+                if (!ValidationEmail.ValidateEmail(user.Email))
+                    throw new CsvParserException(HttpStatusCode.BadRequest, $"{user.Email} is not valid!");
+                
                 var userAlreadyExists = await userRepository.GetUserByIdAsync(user.UserIdentifier);
 
                 if (userAlreadyExists != null)
